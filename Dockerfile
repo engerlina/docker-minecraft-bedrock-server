@@ -13,8 +13,6 @@ RUN --mount=target=/build,source=build BOX64_PACKAGE=$BOX64_PACKAGE /build/setup
 
 EXPOSE 19132/udp
 
-# VOLUME ["/data"]
-
 WORKDIR /data
 
 ENTRYPOINT ["/usr/local/bin/entrypoint-demoter", "--match", "/data", "--debug", "--stdin-on-term", "stop", "/opt/bedrock-entry.sh"]
